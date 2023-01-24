@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.c-letterSpacing-sm {
+  letter-spacing: 0.2px;
+}
+
+.c-letterSpacing-lg {
+  letter-spacing: 5px;
+}
+
+#mobile-tooltip.c-tooltip-hidden {
+  bottom: -100%;
+  transition: bottom 500ms ease-out
+}
+
+#desktop-tooltip {
+  top: -4.85rem;
+}
+
+#desktop-tooltip::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid hsl(217, 19%, 35%);
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#desktop-tooltip.c-tooltip-hidden {
+  opacity: 0;
+  transition: opacity 300ms ease-out
+}
